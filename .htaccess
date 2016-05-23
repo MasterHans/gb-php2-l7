@@ -1,7 +1,17 @@
 RewriteEngine on
-RewriteRule ^news/?$ index.php?ctrl=News [L]
-RewriteRule ^news/all/?$ index.php?ctrl=News&act=All [L]
-RewriteRule ^news/one/([^/]+)/?$ index.php?ctrl=News&act=One&article_id=$1 [L]
-RewriteRule ^admin/edit/([^/]+)/?$ index.php?ctrl=Admin&act=Edit&article_id=$1 [L]
-RewriteRule ^admin/delete/([^/]+)/?$ index.php?ctrl=Admin&act=Delete&article_id=$1 [L]
-RewriteRule ^admin/viewlog/?$ index.php?ctrl=Admin&act=ViewLog [L]
+#Мой вариант
+#RewriteRule ^news/?$ index.php?ctrl=News [L]
+#RewriteRule ^news/all/?$ index.php?ctrl=News&act=All [L]
+#RewriteRule ^news/one/([^/]+)/?$ index.php?ctrl=News&act=One&article_id=$1 [L]
+#RewriteRule ^admin/edit/([^/]+)/?$ index.php?ctrl=Admin&act=Edit&article_id=$1 [L]
+#RewriteRule ^admin/delete/([^/]+)/?$ index.php?ctrl=Admin&act=Delete&article_id=$1 [L]
+#RewriteRule ^admin/viewlog/?$ index.php?ctrl=Admin&act=ViewLog [L]
+
+#Ещё вариант из урока №6
+#RewriteRule ^([a-zA-Z0-9]+)\/([a-zA-Z0-9]+) index.php?ctrl=$1&act=$2
+
+#Урок №7
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php

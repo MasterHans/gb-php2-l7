@@ -1,11 +1,13 @@
 <?php
 
-class NewsController
+namespace Application\Controllers;
+
+use Application\Models\News as NewsModel;
+
+class News
 {
     public function actionAll(){
 
-//        $article = NewsModel::findByOneColumn('title','Новость №1');
-//        var_dump($article);
         $article = NewsModel::findAll();
 
         if ( empty($article) ) {
@@ -13,7 +15,7 @@ class NewsController
             throw $e;
         }
 
-        $view = new View(); // создали объект
+        $view = new \View(); // создали объект
         $view->items = $article;
         $view->display('news/all.php');
 
@@ -29,7 +31,7 @@ class NewsController
             throw $e;
         }
 
-        $view = new View(); // создали объект
+        $view = new \View(); // создали объект
         $view->item = $item;
         $view->display('news/one.php'); // дали команду на показ шаблона с указанными ранее данными
     }

@@ -1,6 +1,10 @@
 <?php
 
-class AdminController
+namespace Application\Controllers;
+
+use Application\Models\News as NewsModel;
+
+class Admin
 {
     public function actionInsert(){
         if (!empty($_POST)){
@@ -20,11 +24,6 @@ class AdminController
             if (isset($data['title']) && isset($data['text']) && isset($data['n_date'])) {
                 $article = new NewsModel();
                 $article->fillData($data);
-//                die;
-//                foreach ($data as $key => $prop) {
-//                    $article->$key = $prop;
-//                }
-
                 $article->save();
                 header('Location: /');
                 die;
@@ -67,10 +66,7 @@ class AdminController
             if (isset($data['title']) && isset($data['text']) && isset($data['n_date'])) {
                 $article = new NewsModel();
                 $article->fillData($data);
-//                die;
-//                foreach ($data as $key => $prop) {
-//                    $article->$key = $prop;
-//                }
+
                 $article->save();
                 header('Location: /');
                 die;
@@ -90,10 +86,10 @@ class AdminController
     }
     public function actionViewLog()
     {
-        $log = new EventLog();
+        $log = new \EventLog();
         $LogItems = $log->getLog();
 
-        $view = new View(); // ñîçäàëè îáúåêò
+        $view = new \View(); // ÑÐ¾Ð·Ð´Ð°Ð»Ð¸ Ð¾Ð±ÑŠÐµÐºÑ‚
         $view->items = $LogItems;
         $view->display('log.php');
     }

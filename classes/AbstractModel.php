@@ -1,6 +1,5 @@
 <?php
 
-
 class AbstractModel
 {
     protected static $table;

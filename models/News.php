@@ -7,8 +7,11 @@
  * @property $text
  * @property $n_date
  */
-class NewsModel
-    extends AbstractModel
+
+namespace Application\Models;
+
+class News
+    extends \AbstractModel
 {
     protected static $table='news';
 

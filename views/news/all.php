@@ -29,7 +29,7 @@
 
     <div class="add-form">
         <?php
-            $actForm = '/index.php?ctrl=Admin&act=Insert';
+            $actForm = '/admin/insert/';
             require_once __DIR__ . '/../../views/news/form.php'
         ?>
     </div>

@@ -20,7 +20,8 @@ class NewsController
     }
 
     public function actionOne(){
-        $id = $_GET['article_id'];
+        $pathParts = explode('/',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
+        $id = $pathParts[3];
         $item = NewsModel::findOneByPk($id);
 
         if ( empty($item) ) {

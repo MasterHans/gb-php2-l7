@@ -33,7 +33,8 @@ class AdminController
 
     }
     public function actionEdit(){
-        $id = $_GET['article_id'];
+        $pathParts = explode('/',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
+        $id = $pathParts[3];
         $Item = NewsModel::findOneByPk($id);
 
 
@@ -42,7 +43,7 @@ class AdminController
         $n_date = $Item->n_date;
         $article_id = $Item->article_id;
 
-        $actForm = '/index.php?ctrl=Admin&act=Update&article_id=' . $article_id;
+        $actForm = '/admin/update/' . $article_id;
         require_once __DIR__ . '/../views/news/form.php';
     }
     public function actionUpdate(){
@@ -60,7 +61,8 @@ class AdminController
                 $data['n_date'] = $_POST['n_date'];
             }
 
-            $data['article_id'] = $_GET['article_id'];
+            $pathParts = explode('/',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
+            $data['article_id'] = $pathParts[3];
 
             if (isset($data['title']) && isset($data['text']) && isset($data['n_date'])) {
                 $article = new NewsModel();
@@ -77,8 +79,10 @@ class AdminController
     }
     public function actionDelete()
     {
+        $pathParts = explode('/',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
+
         $article = new NewsModel();
-        $article->article_id = $_GET['article_id'];
+        $article->article_id = $pathParts[3];
         $article->delete();
 
         header('Location: /');

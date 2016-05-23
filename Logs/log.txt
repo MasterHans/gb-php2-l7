@@ -1,3 +1,15 @@
 Время события: 08:34
 Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l6.in\classes\EventLog.php
 Текст сообщения : Файл лога отсутствует!
+Время события: 20:18
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\NewsController.php
+Текст сообщения : Новость c article_id =  не найдена в БД!!!
+Время события: 20:18
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\NewsController.php
+Текст сообщения : Новость c article_id =  не найдена в БД!!!
+Время события: 20:18
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\NewsController.php
+Текст сообщения : Новость c article_id =  не найдена в БД!!!
+Время события: 20:21
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\NewsController.php
+Текст сообщения : Новость c article_id =  не найдена в БД!!!

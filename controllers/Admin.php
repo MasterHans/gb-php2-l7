@@ -3,6 +3,8 @@
 namespace Application\Controllers;
 
 use Application\Models\News as NewsModel;
+use Application\lib_classes\EventLog;
+use Application\lib_classes\View;
 
 class Admin
 {
@@ -86,10 +88,10 @@ class Admin
     }
     public function actionViewLog()
     {
-        $log = new \EventLog();
+        $log = new EventLog();
         $LogItems = $log->getLog();
 
-        $view = new \View(); // создали объект
+        $view = new View(); // создали объект
         $view->items = $LogItems;
         $view->display('log.php');
     }

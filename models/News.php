@@ -10,8 +10,10 @@
 
 namespace Application\Models;
 
+use Application\lib_classes\AbstractModel;
+
 class News
-    extends \AbstractModel
+    extends AbstractModel
 {
     protected static $table='news';
 

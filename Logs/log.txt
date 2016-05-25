@@ -13,3 +13,12 @@
 Время события: 20:21
 Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\NewsController.php
 Текст сообщения : Новость c article_id =  не найдена в БД!!!
+Время события: 21:01
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\lib_classes\DB.php
+Текст сообщения : SQLSTATE[HY000] [1049] Unknown database 'news22'
+Время события: 21:04
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\News.php
+Текст сообщения : Нет новостей в БД!!!
+Время события: 21:04
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\News.php
+Текст сообщения : Нет новостей в БД!!!

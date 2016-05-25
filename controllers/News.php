@@ -3,6 +3,8 @@
 namespace Application\Controllers;
 
 use Application\Models\News as NewsModel;
+use Application\lib_classes\View;
+use Application\lib_classes\E404Exception;
 
 class News
 {
@@ -15,7 +17,7 @@ class News
             throw $e;
         }
 
-        $view = new \View(); // создали объект
+        $view = new View(); // создали объект
         $view->items = $article;
         $view->display('news/all.php');
 
@@ -31,7 +33,7 @@ class News
             throw $e;
         }
 
-        $view = new \View(); // создали объект
+        $view = new View(); // создали объект
         $view->item = $item;
         $view->display('news/one.php'); // дали команду на показ шаблона с указанными ранее данными
     }

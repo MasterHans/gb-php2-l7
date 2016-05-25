@@ -1,4 +1,9 @@
 <?php
+
+use Application\lib_classes\EventLog;
+use Application\lib_classes\View;
+use Application\lib_classes\E404Exception;
+
 require_once __DIR__ . '/autoload.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);

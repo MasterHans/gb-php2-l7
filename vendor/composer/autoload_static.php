@@ -4,13 +4,24 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc7703107ea0ece9620cad8384e69711d
+class ComposerStaticInit719cda33c346c255dc88636a8a8a1ffb
 {
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
         'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
         'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
         'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
+        'PHP_Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
         'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
         'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
@@ -20,7 +31,8 @@ class ComposerStaticInitc7703107ea0ece9620cad8384e69711d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitc7703107ea0ece9620cad8384e69711d::$classMap;
+            $loader->prefixesPsr0 = ComposerStaticInit719cda33c346c255dc88636a8a8a1ffb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit719cda33c346c255dc88636a8a8a1ffb::$classMap;
 
         }, null, ClassLoader::class);
     }

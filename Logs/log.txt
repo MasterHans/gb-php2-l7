@@ -22,3 +22,18 @@
 Время события: 21:04
 Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\controllers\News.php
 Текст сообщения : Нет новостей в БД!!!
+Время события: 21:42
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\lib_classes\DB.php
+Текст сообщения : SQLSTATE[HY000] [1049] Unknown database 'news1'
+Время события: 22:09
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\lib_classes\DB.php
+Текст сообщения : SQLSTATE[HY000] [1049] Unknown database 'news1'
+Время события: 22:09
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\lib_classes\DB.php
+Текст сообщения : SQLSTATE[HY000] [1049] Unknown database 'news1'
+Время события: 22:09
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\lib_classes\DB.php
+Текст сообщения : SQLSTATE[HY000] [1049] Unknown database 'news1'
+Время события: 22:10
+Место возникновения : D:\project\GeekBrains\gb-php2\gb-php2-l7.in\lib_classes\DB.php
+Текст сообщения : SQLSTATE[HY000] [1049] Unknown database 'news1'

@@ -6,6 +6,16 @@ class View
 
 {
     protected $data = [];
+    protected $twig;
+
+    public function __construct(){
+        /*Twig*/
+
+        $loader = new \Twig_Loader_Filesystem(__DIR__ . '/../twig_templates');
+        $this->twig = new \Twig_Environment($loader, array(
+            'cache' => __DIR__ . '/../twig_cache',
+        ));
+    }
 
     public function __set($k, $v){
             $this->data[$k] = $v;
@@ -16,7 +26,7 @@ class View
         return $this->data[$k];
     }
 
-    public function render($template){
+    public function renderInside($template){
 
         foreach ($this->data as $key => $val) {
             $$key = $val;
@@ -30,7 +40,18 @@ class View
     }
 
     public function display($template){
-        echo $this->render($template);
+        echo $this->renderInside($template);
+    }
+
+    public function displayInTwig($template){
+        $template = $this->twig->loadTemplate($template);
+
+        foreach ($this->data as $key => $val) {
+            $$key = $val;
+        }
+//        echo $template->render(array('the' => 'variables', 'go' => 'here'));
+
+        echo $template->render(array('var'=>$$key));
     }
 
     public function current()

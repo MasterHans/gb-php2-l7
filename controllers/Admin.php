@@ -93,6 +93,7 @@ class Admin
 
         $view = new View(); // создали объект
         $view->items = $LogItems;
-        $view->display('log.php');
+//        $view->display('log.php');
+        $view->displayInTwig('log.html');
     }
 }

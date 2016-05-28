@@ -6,5 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'lib_classes\\' => array('/lib_classes'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
+    'Models\\' => array('/models'),
+    'Controllers\\' => array('/controllers'),
+    'Application\\' => array('/'),
 );

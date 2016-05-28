@@ -4,5 +4,16 @@
     "phpunit/php-timer": "~1.0",
     "twig/twig": "~1.0"
 
+  },
+
+  "autoload": {
+    "psr-0": {
+      "Application\\": "/",
+      "Controllers\\": "/controllers/",
+      "Models\\": "/models/",
+      "lib_classes\\": "/lib_classes/"
+    },
+    "classmap": ["controllers","models","lib_classes"]
   }
+
 }

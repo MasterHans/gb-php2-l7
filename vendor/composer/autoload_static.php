@@ -7,6 +7,13 @@ namespace Composer\Autoload;
 class ComposerStaticInit719cda33c346c255dc88636a8a8a1ffb
 {
     public static $prefixesPsr0 = array (
+        'l' => 
+        array (
+            'lib_classes\\' => 
+            array (
+                0 => '/lib_classes',
+            ),
+        ),
         'T' => 
         array (
             'Twig_' => 
@@ -14,16 +21,48 @@ class ComposerStaticInit719cda33c346c255dc88636a8a8a1ffb
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
+        'M' => 
+        array (
+            'Models\\' => 
+            array (
+                0 => '/models',
+            ),
+        ),
+        'C' => 
+        array (
+            'Controllers\\' => 
+            array (
+                0 => '/controllers',
+            ),
+        ),
+        'A' => 
+        array (
+            'Application\\' => 
+            array (
+                0 => '/',
+            ),
+        ),
     );
 
     public static $classMap = array (
+        'Application\\Controllers\\Admin' => __DIR__ . '/../..' . '/controllers/Admin.php',
+        'Application\\Controllers\\News' => __DIR__ . '/../..' . '/controllers/News.php',
+        'Application\\Models\\News' => __DIR__ . '/../..' . '/models/News.php',
+        'Application\\lib_classes\\AbstractModel' => __DIR__ . '/../..' . '/lib_classes/AbstractModel.php',
+        'Application\\lib_classes\\DB' => __DIR__ . '/../..' . '/lib_classes/DB.php',
+        'Application\\lib_classes\\E404Exception' => __DIR__ . '/../..' . '/lib_classes/E404Exception.php',
+        'Application\\lib_classes\\EventLog' => __DIR__ . '/../..' . '/lib_classes/EventLog.php',
+        'Application\\lib_classes\\View' => __DIR__ . '/../..' . '/lib_classes/View.php',
         'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
+        'IModel' => __DIR__ . '/../..' . '/lib_classes/IModel.php',
         'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
         'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
         'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
         'PHP_Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
         'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
+        'UserController' => __DIR__ . '/../..' . '/controllers/UserController.php',
+        'UserModel' => __DIR__ . '/../..' . '/models/UserModel.php',
         'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
         'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
     );

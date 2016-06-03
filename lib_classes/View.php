@@ -51,7 +51,7 @@ class View
         }
 //        echo $template->render(array('the' => 'variables', 'go' => 'here'));
 
-        echo $template->render(array('var'=>$$key));
+        echo $template->render(array('items'=>$$key));
     }
 
     public function current()

@@ -4,8 +4,6 @@ use Application\lib_classes\EventLog;
 use Application\lib_classes\View;
 use Application\lib_classes\E404Exception;
 
-//require __DIR__ . '/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
-//require_once __DIR__ . '/autoload.php';
 require __DIR__ . '/vendor/autoload.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);

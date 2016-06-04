@@ -6,7 +6,8 @@ class DB
     private $dbh;
     private $className = 'stdClass';
 
-    public function __construct (){
+    public function __construct()
+    {
         $this->dbh = new \PDO('mysql:dbname=news;host=localhost','root','');
         $this->dbh->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
     }

@@ -19,9 +19,9 @@ class DB
 
     public function query($sql,$params=[])
     {
-            $sth = $this->dbh->prepare($sql);
-            $sth->execute($params);
-            return $sth->fetchAll(\PDO::FETCH_CLASS, $this->className);
+        $sth = $this->dbh->prepare($sql);
+        $sth->execute($params);
+        return $sth->fetchAll(\PDO::FETCH_CLASS, $this->className);
     }
 
     public function execute($sql,$params=[])

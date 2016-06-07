@@ -12,7 +12,7 @@ $act = !empty($pathParts[2]) ? ucfirst($pathParts[2]) : 'All';
 
 $controllerClassName = 'Application\\Controllers\\' . $ctrl;
 
-
+require __DIR__ . './autoload.php';
 
 /*Подсчёт времени*/
 PHP_Timer::start();

@@ -6,24 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Application\\Controllers\\Admin' => $baseDir . '/controllers/Admin.php',
-    'Application\\Controllers\\News' => $baseDir . '/controllers/News.php',
-    'Application\\Models\\News' => $baseDir . '/models/News.php',
-    'Application\\lib_classes\\AbstractModel' => $baseDir . '/lib_classes/AbstractModel.php',
-    'Application\\lib_classes\\DB' => $baseDir . '/lib_classes/DB.php',
-    'Application\\lib_classes\\E404Exception' => $baseDir . '/lib_classes/E404Exception.php',
-    'Application\\lib_classes\\EventLog' => $baseDir . '/lib_classes/EventLog.php',
-    'Application\\lib_classes\\View' => $baseDir . '/lib_classes/View.php',
     'EasyPeasyICS' => $vendorDir . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
-    'IModel' => $baseDir . '/lib_classes/IModel.php',
     'PHPMailer' => $vendorDir . '/phpmailer/phpmailer/class.phpmailer.php',
     'PHPMailerOAuth' => $vendorDir . '/phpmailer/phpmailer/class.phpmaileroauth.php',
     'PHPMailerOAuthGoogle' => $vendorDir . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
     'PHP_Timer' => $vendorDir . '/phpunit/php-timer/src/Timer.php',
     'POP3' => $vendorDir . '/phpmailer/phpmailer/class.pop3.php',
     'SMTP' => $vendorDir . '/phpmailer/phpmailer/class.smtp.php',
-    'UserController' => $baseDir . '/controllers/UserController.php',
-    'UserModel' => $baseDir . '/models/UserModel.php',
     'ntlm_sasl_client_class' => $vendorDir . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
     'phpmailerException' => $vendorDir . '/phpmailer/phpmailer/class.phpmailer.php',
 );
